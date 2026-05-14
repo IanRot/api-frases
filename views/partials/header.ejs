@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> | Antigravity Frases</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="glass">
+        <a href="/" class="logo">Frases<span style="color:var(--text-primary)">API</span></a>
+        <nav>
+            <ul id="nav-links">
+                <!-- Se llenará dinámicamente con JS según el login -->
+                <li class="guest-only"><a href="/login">Iniciar Sesión</a></li>
+                <li class="guest-only"><a href="/register" class="btn btn-primary" style="padding: 0.5rem 1rem">Registrarse</a></li>
+                <li class="auth-only" style="display: none;"><a href="/crear-frase">Nueva Frase</a></li>
+                <li class="auth-only" style="display: none;"><a href="#" id="logout-btn" class="btn btn-danger" style="padding: 0.5rem 1rem">Salir</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>

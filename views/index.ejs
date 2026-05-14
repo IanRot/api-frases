@@ -1,0 +1,32 @@
+<%- include('partials/header') %>
+
+<div class="random-section glass">
+    <h2 style="font-size: 2rem; margin-bottom: 1rem;">Inspírate con una Frase Aleatoria</h2>
+    <div style="display: flex; gap: 1rem; justify-content: center; max-width: 500px; margin: 0 auto;">
+        <select id="random-type" class="form-group" style="margin: 0; padding: 0.75rem;">
+            <option value="">Cualquier tipo</option>
+            <option value="motivacional">Motivacional</option>
+            <option value="filosofica">Filosófica</option>
+            <option value="graciosa">Graciosa</option>
+            <option value="high_IQ">High IQ</option>
+        </select>
+        <button id="random-btn" class="btn btn-primary">¡Sorpréndeme!</button>
+    </div>
+    <div id="random-result" class="random-result">
+        <span style="color: var(--text-secondary); font-weight: 400; font-size: 1.2rem;">Haz clic para obtener una frase.</span>
+    </div>
+</div>
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+    <h2>Colección de Frases</h2>
+    <a href="/crear-frase" class="btn btn-primary auth-only" style="display: none;">+ Añadir Frase</a>
+</div>
+
+<div id="phrases-container" class="phrases-grid">
+    <!-- Se llena con JS -->
+    <div style="grid-column: 1/-1; text-align: center; padding: 3rem;">
+        <p style="color: var(--text-secondary);">Cargando frases...</p>
+    </div>
+</div>
+
+<%- include('partials/footer') %>

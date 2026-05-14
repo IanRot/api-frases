@@ -1,0 +1,34 @@
+<%- include('partials/header') %>
+
+<div class="form-container glass">
+    <h2 style="text-align: center; margin-bottom: 2rem;"><%= isEdit ? 'Editar Frase' : 'Crear Nueva Frase' %></h2>
+    <div id="form-alert" class="alert"></div>
+    <form id="phrase-form">
+        <input type="hidden" id="phraseId" value="<%= isEdit ? phraseId : '' %>">
+        
+        <div class="form-group">
+            <label for="texto">Texto de la Frase</label>
+            <textarea id="texto" name="texto" rows="4" required placeholder="Escribe tu frase aquí..."></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label for="tipo">Tipo / Categoría</label>
+            <select id="tipo" name="tipo" required>
+                <option value="">Selecciona un tipo</option>
+                <option value="motivacional">Motivacional</option>
+                <option value="filosofica">Filosófica</option>
+                <option value="graciosa">Graciosa</option>
+                <option value="high_IQ">High IQ</option>
+                <option value="romantica">Romántica</option>
+                <option value="reflexion">Reflexión</option>
+            </select>
+        </div>
+        
+        <div style="display: flex; gap: 1rem;">
+            <a href="/" class="btn btn-secondary" style="flex: 1;">Cancelar</a>
+            <button type="submit" class="btn btn-primary" style="flex: 1;"><%= isEdit ? 'Actualizar' : 'Guardar' %></button>
+        </div>
+    </form>
+</div>
+
+<%- include('partials/footer') %>
